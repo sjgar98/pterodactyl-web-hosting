@@ -14,6 +14,7 @@ if [ ! -d /home/container/public_html ]; then
 fi
 
 echo "Listening on port $SERVER_PORT"
+echo "Listen $SERVER_PORT" > /home/container/ports.conf
 
 echo "Starting Apache..."
 exec apache2-foreground -f /home/container/apache2.conf
