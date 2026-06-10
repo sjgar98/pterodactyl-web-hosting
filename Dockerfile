@@ -16,6 +16,7 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 USER container
 ENV USER=container
 ENV HOME=/home/container
+ENV APACHE_RUN_USER=container
 
 WORKDIR /home/container
 
