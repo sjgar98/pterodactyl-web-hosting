@@ -13,5 +13,7 @@ if [ ! -d /home/container/public_html ]; then
     cp -r /usr/local/default_files/public_html /home/container
 fi
 
+echo "Listening on port $SERVER_PORT"
+
 echo "Starting Apache..."
 exec apache2-foreground -f /home/container/apache2.conf
