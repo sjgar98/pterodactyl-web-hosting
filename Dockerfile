@@ -20,6 +20,7 @@ ENV APACHE_RUN_USER=container
 
 WORKDIR /home/container
 
+COPY default_files/apache2/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY default_files /usr/local/default_files
 COPY ./entrypoint.sh /entrypoint.sh
 
